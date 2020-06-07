@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+
 
 const Approach = () => (
- <body>
-  
-       
+      <div> 
         <header class="jumbotron jumbotron-fluid">
             <div class="container">
                 <div class="row">
@@ -17,37 +16,7 @@ const Approach = () => (
                 </div>
             </div>   
          </header>
-        
-    
-     <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
-        <a class="navbar-brand" href="index.html">FV</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#FVnavbar" aria-controls="FVnavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="#FVnavbar">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Approach</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="application.html">Application</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="appStatus.html">Application Status</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ourPortfolio.html">Our Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="news.html">News</a>
-              </li>
-            </ul>
-        </div>
-    </nav>
-
+     
         <section id="approachMan" class="d-flex justify-content-center align-items-center">
             <div class="container">          
                <div class="row row-content">
@@ -109,8 +78,8 @@ const Approach = () => (
           </div>
         </div>
       </footer>
-  
-</body>
+  </div>
+
 )
 
 export default Approach

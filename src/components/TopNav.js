@@ -2,6 +2,9 @@ import React from 'react'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { withRouter } from "react-router"
+import { connect } from 'react-redux'
+import { inputChange, onAppSubmit } from '../actions'
+
 
 const TopNav = (props) => (
  <div>
@@ -10,7 +13,7 @@ const TopNav = (props) => (
         href="#"
         onClick={(e) => props.onLinkClick(e, '/')}
     >
-        Acme Corp
+        Fenimore Ventures
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse>
@@ -36,4 +39,8 @@ const TopNav = (props) => (
 </div>
 )
 
-export default withRouter(TopNav)
+export const mapStateToProps = (state) => ({
+  appMsg: state.appMsg
+})
+
+export default connect(mapStateToProps)(withRouter(TopNav))

@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import TopNav from './TopNav'
 import Routes from './Routes';
-import { submitApp } from '../Api'
+import Footer from './Footer'
 
 class App extends React.Component {
   constructor(props){
@@ -20,7 +20,6 @@ class App extends React.Component {
     }
     
     this.onLinkClick = this.onLinkClick.bind(this)
-    this.onSubmit = this.onSubmit.bind(this)
     this.onTextChange = this.onTextChange.bind(this)
   }
   
@@ -29,30 +28,6 @@ class App extends React.Component {
     this.props.history.push(path)
   }
   
-  async onSubmit(e) {
-    e.preventDefault();
-    let response 
-   
-    try {
-     response = await submitApp(
-        {
-          name: this.state.name,
-          ein: this.state.ein,
-          email: this.state.email,
-          capitalLevel: this.state.capitalLevel,
-          description: this.state.description
-        }
-      )
-    } catch(e) {
-      this.setState({msg: 'error occured while submitting application'})
-      return
-    }
-    
-    
-    this.setState({appMsg: 'Successfully Submitted'})
-    console.log(response)
-    this.props.history.push('/')
-  }
   
   onTextChange(e) {
     const value = e.target.value
@@ -66,7 +41,6 @@ class App extends React.Component {
     const appProps = {
       email: this.state.email,
       msg: this.state.msg,
-      onSubmit: this.onSubmit,
       onLinkClick: this.onLinkClick,
       onTextChange: this.onTextChange
     }
@@ -75,6 +49,7 @@ class App extends React.Component {
       <Container fluid>
         <TopNav appMsg={this.state.appMsg} onLinkClick={this.onLinkClick} />
         <Routes appProps={appProps} />
+        <Footer />
       </Container>
     );
   }

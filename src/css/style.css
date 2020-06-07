@@ -1,0 +1,255 @@
+body {
+  font-family: "manrope", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Catamaran", cursive;
+}
+
+
+
+h2 {
+  color: rgb(16, 206, 111);
+}
+
+
+footer {
+  background-image: linear-gradient(to right, #ebe3e3, #eedfdf, rgb(38, 29, 39));
+  padding: 10px 0;
+  
+}
+
+.jumbotron {
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 0px;
+  background-image: linear-gradient(to right, #ebe3e3, #eedfdf, rgb(38, 29, 39));
+  color: white;
+}
+
+
+
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-image: linear-gradient(to right, #ebe3e3, #eedfdf, rgb(38, 29, 39));
+  
+  justify-content: center;
+}
+
+/* Home Section */
+
+#home {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/images/jorgeZapata.jpg") top center;
+  background-size: cover;
+}
+
+#home h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: white;
+}
+
+#home p {
+  color: white;
+  margin-bottom: 50px;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+  #home h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+
+/* Application Page */
+
+
+#applicationMan {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/images/andrewSeaman.jpg") top center;
+  background-size: cover;
+}
+
+#applicationMan h1 {
+  margin: 0 0 10px 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#applicationMan p {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  border:  1px solid #149ddd;
+}
+
+#applicationMan ul {
+  color: white;
+  
+}
+
+#applicationMan h2 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+
+
+
+/* Approach Page */
+
+
+#approachMan {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/images/eugenia-clara-Q_hMTpKu5qg-unsplash.jpg") top center;
+  background-size: cover;
+}
+
+
+#approachMan h1 {
+  margin: 0 0 10px 0;
+  padding-left: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#approachMan p {
+  color: #fff;
+  margin-bottom: 50px;
+  padding-left: 10px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  border:  1px solid #149ddd;
+}
+
+#approachMan ul {
+  color: white;
+  
+}
+
+
+/* Application Status Page */
+
+#appStatusMan {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/images/max-kleinen-CMRF4wi4y7g-unsplash.jpg") top center;
+  background-size: cover;
+}
+
+
+#appStatusMan h1 {
+  margin: 0 0 10px 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#appStatusMan p {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  border:  1px solid #149ddd;
+}
+
+#appStatusMan ul {
+  color: white;
+  
+}
+
+#appStatusMan label {
+  color: white
+}
+
+#appStatusMan h2 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+
+
+/* News Page */
+
+#newsMan {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/images/news1.jpg") top center;
+  background-size: cover;
+}
+
+
+#newsMan h1 {
+  margin: 0 0 10px 0;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#newsMan p {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  border:  1px solid #149ddd;
+}
+
+#newsMan ul {
+  color: white;
+  
+}
+
+#newsMan label {
+  color: white
+}
+
+#newsMan h2 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+
+
+#portfolioMan {
+  width: 100%;
+  min-height: 50vh;
+  background: url("/images/dan-gold-4_jhDO54BYg-unsplash.jpg") top center;
+  background-size: cover;
+}
+
+#portfolioMan h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: white;
+}
+
+
+#images img {
+  min-height: 200px;
+  min-width: 200px;
+  margin: 10px;
+  padding: 10px;
+}
+
+  

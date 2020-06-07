@@ -13,6 +13,7 @@ const create = (appData, callback) => {
   };
   dynamoDb.put(params, (err, result) => {
     if(err) return callback(err)
+    delete appData.ein
     callback(null, appData)
   })
 }  

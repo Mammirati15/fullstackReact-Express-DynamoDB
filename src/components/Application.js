@@ -2,87 +2,80 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import { connect } from 'react-redux'
+import { inputChange, onAppSubmit } from '../actions'
 
 const Application = (props) => (
     <div>
-      
     
-     <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
-        <a class="navbar-brand" href="index.html">FV</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#FVnavbar" aria-controls="FVnavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="#FVnavbar">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="approach.html">Approach</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Application</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="appStatus.html">Application Status</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ourPortfolio.html">Our Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="news.html">News</a>
-              </li>
-            </ul>
-        </div>
-    </nav>
-
-    <section id="applicationMan" class="d-flex flex-column justify-content-center align-items-center">
-      <div class="applicationMan-container" data-aos="fade-in">
-          <div class="row row-content">
-              <div class="col">          
+      <header className="jumbotron jumbotron-fluid">
+        <div className="container">
+            <div className="row">
+              <div className="col-4 col-sm-3 col-md-2 align-self-center">
+                <img src="images/logo1.png" height="100" width="100" className="img-fluid" />
+              </div> 
+              <div className="col-8 text-center">
+                    <h1 className="text-dark text-align-center">Fenimore Ventures</h1>
+                    <h2 className="text-dark">We can help</h2>
+              </div>
+            </div>  
+        </div>   
+      </header>
+    
+     
+    <section id="applicationMan" className="d-flex flex-column justify-content-center align-items-center">
+      <div className="applicationMan-container" data-aos="fade-in">
+          <div className="row row-content">
+              <div className="col">          
                   <h1>Submit Your Application</h1>
                   {props.msg &&
-                  <div class="alert alert-warning" role="alert">
+                  <div className="alert alert-warning" role="alert">
                     {props.msg}
                   </div>
                   }
-                  <form onSubmit={props.onSubmit} id="formInputA">
-                    <div class="form-group row">
-                      <label class="text-light" for="businessName">Business Name</label>
+                  <form 
+                    onSubmit={e => {
+                      e.preventDefault()
+                      props.onSubmit(props.history)
+                    }} 
+                    id="formInputA"
+                  >
+                    <div className="form-group row">
+                      <label className="text-light" for="businessName">Business Name</label>
                       <input 
                         type="text" 
-                        class="form-control" 
+                        className="form-control" 
                         id="name" 
                         placeholder="Business Name"
                         onChange={props.onTextChange}  
                       />
                     </div>
-                    <div class="form-group row">
-                      <label class="text-light" for="ein">EIN</label>
+                    <div className="form-group row">
+                      <label className="text-light" for="ein">EIN</label>
                       <input 
                         type="text" 
-                        class="form-control" 
+                        className="form-control" 
                         id="ein" 
                         placeholder="EIN" 
                         value={props.ein}
                         onChange={props.onTextChange}
                       />
                     </div>
-                    <div class="form-group row">
-                      <label class="text-light" for="email">Email</label>
+                    <div className="form-group row">
+                      <label className="text-light" for="email">Email</label>
                       <input 
                         type="email" 
-                        class="form-control" 
+                        className="form-control" 
                         id="email" 
                         placeholder="Email" 
                         value={props.email}
                         onChange={props.onTextChange}  
                       />
                     </div>
-                    <div class="form-group row">
-                      <label class="text-light" for="ammountDropDown">Ammount of Capital Requesting</label>
+                    <div className="form-group row">
+                      <label className="text-light" for="ammountDropDown">Ammount of Capital Requesting</label>
                       <select 
-                        class="form-control" 
+                        className="form-control" 
                         id="capitalLevel"
                         value={props.select}
                         onChange={props.onTextChange}
@@ -94,11 +87,11 @@ const Application = (props) => (
                         <option value="5">$150,000+</option>
                       </select>
                     </div>                          
-                    <div class="form-group row">
-                      <label class="text-light" for="textArea">Explain Your Business</label>
+                    <div className="form-group row">
+                      <label className="text-light" for="textArea">Explain Your Business</label>
                       <textarea 
                         type="text" 
-                        class="form-control" 
+                        className="form-control" 
                         id="description" rows="7" 
                         placeholder="Briefly Explain Your Business"
                         value={props.bodyText}
@@ -106,7 +99,7 @@ const Application = (props) => (
                       >
                       </textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-primary">Submit</button>
                   </form>           
                   </div>
                 </div>
@@ -118,38 +111,57 @@ const Application = (props) => (
 
     
     
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-4 col-sm-3 col-md-2 align-self-center">
-            <img src="images/logo1.png" height="100" width="100" class="img-fluid" />
+    <footer className="site-footer">
+      <div className="container">
+        <div className="row">
+          <div className="col-4 col-sm-3 col-md-2 align-self-center">
+            <img src="images/logo1.png" height="100" width="100" className="img-fluid" />
           </div>
-          <div class="col-6 col-sm-5 text-center">
+          <div className="col-6 col-sm-5 text-center">
             <h5>Social</h5>
             <a href="http://instagram.com/"
-              ><i class="fa fa-instagram"></i>Instagram</a
+              ><i className="fa fa-instagram"></i>Instagram</a
             >
             <a href="http://facebook.com/"
-              ><i class="fa fa-facebook"></i>Facebook</a
+              ><i className="fa fa-facebook"></i>Facebook</a
             >
             <a href="http://twitter.com/"
-              ><i class="fa fa-twitter"></i>Twitter</a
+              ><i className="fa fa-twitter"></i>Twitter</a
             >
             <a href="http://youtube.com/"
-              ><i class="fa fa-youtube"></i>YouTube</a
+              ><i className="fa fa-youtube"></i>YouTube</a
             >
           </div>
-          <div class="col-sm-4 text-center">
-            <p class="text-dark">Contact Us: </p>
-            <i class="fa fa-phone fa-lg text-primary"></i> Tel: 1-222-222-2222
+          <div className="col-sm-4 text-center">
+            <p className="text-dark">Contact Us: </p>
+            <i className="fa fa-phone fa-lg text-primary"></i> Tel: 1-222-222-2222
             <br />
-            <i class="fa fa-envelope fa-lg text-primary"></i> Email:
+            <i className="fa fa-envelope fa-lg text-primary"></i> Email:
             Fvent@gmail.co
           </div>
         </div>
       </div>
     </footer>
   </div>
+
 )
 
-export default Application
+export const mapStateToProps = (state) => ({
+  name: state.name,
+  ein: state.ein,
+  email: state.email,
+  capitalLevel: state.capitalLevel,
+  description: state.description
+})
+
+export const mapDispatchToProps = (dispatch) => ({
+  onTextChange: (e) => {
+    e.preventDefault()
+    dispatch( inputChange(e.target.id, e.target.value) )
+  },
+  onSubmit: (history) => {
+    dispatch( onAppSubmit(history) )
+  },
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Application)

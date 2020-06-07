@@ -12,6 +12,9 @@ const Routes = (props) => (
       <Route path="/application" render={p => <Application {...p} {...props.appProps} />} />
       <Route path="/approach" component={Approach} />
     </Switch>
+    
 )
+
+
 
 export default Routes

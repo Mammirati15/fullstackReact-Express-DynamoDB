@@ -28,6 +28,11 @@ const TopNav = (props) => (
           onClick={(e) => props.onLinkClick(e, '/approach')}
         >Approach
         </Nav.Link>
+        <Nav.Link
+          className="appstatus-btn"
+          onClick={(e) => props.onLinkClick(e, '/appstatuskey')}
+        >Application Status
+        </Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Navbar>

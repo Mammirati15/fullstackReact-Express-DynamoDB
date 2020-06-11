@@ -20,6 +20,17 @@ app.post('/application', (req, res) => {
   })
 })
 
+app.get('/application/:appKey', (req, res) => {
+  console.log('get /application', req.params.appKey)
+  appModel.find(req.params.appKey, (err, result) => {
+    if(err) {
+      res.json({success: false, err: err})
+    } else {
+      res.json({success: true, data: result})
+    }
+  })
+})
+
 const port = parseInt(process.env.PORT) + 1
 app.listen(port, () => {console.log('server started ' + port)})
 

@@ -12,3 +12,5 @@
 - News (send a confirmation of email)
 - Store the state in Redux
 - Use react-bootstrap for the styling
+* Add a dismiss alert button for success key(with react-bootstrap)
+* (Where we are) How to write get request to DDB.

@@ -1,33 +1,11 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
-import { connect } from 'react-redux'
-import { inputChange, onAppSubmit } from '../actions'
+import React from 'react';
 
-const Application = (props) => (
-    <div>
-    
-      <header className="jumbotron jumbotron-fluid">
-        <div className="container">
-            <div className="row">
-              <div className="col-4 col-sm-3 col-md-2 align-self-center">
-                <img src="images/logo1.png" height="100" width="100" className="img-fluid" />
-              </div> 
-              <div className="col-8 text-center">
-                    <h1 className="text-dark text-align-center">Fenimore Ventures</h1>
-                    <h2 className="text-dark">We can help</h2>
-              </div>
-            </div>  
-        </div>   
-      </header>
-    
-     
-    <section id="applicationMan" className="d-flex flex-column justify-content-center align-items-center">
+const ContactUs = (props) => (
+      
       <div className="applicationMan-container" data-aos="fade-in">
           <div className="row row-content">
               <div className="col">          
-                  <h1>Submit Your Application</h1>
+                  <h1>Contact Us</h1>
                   {props.msg &&
                   <div className="alert alert-warning" role="alert">
                     {props.msg}
@@ -73,21 +51,6 @@ const Application = (props) => (
                       />
                     </div>
                     <div className="form-group row">
-                      <label className="text-light" for="ammountDropDown">Ammount of Capital Requesting</label>
-                      <select 
-                        className="form-control" 
-                        id="capitalLevel"
-                        value={props.select}
-                        onChange={props.onTextChange}
-                      >
-                        <option value="1">$10,000-$25,000</option>
-                        <option value="2">$25,000-$50,000</option>
-                        <option value="3">$50,000-$75,000</option>
-                        <option value="4">$75,000-$150,000</option>
-                        <option value="5">$150,000+</option>
-                      </select>
-                    </div>                          
-                    <div className="form-group row">
                       <label className="text-light" for="textArea">Explain Your Business</label>
                       <textarea 
                         type="text" 
@@ -105,33 +68,7 @@ const Application = (props) => (
                 </div>
               
       </div>
-    </section>
-  
-
-
-    
-    
- 
-  </div>
 
 )
 
-export const mapStateToProps = (state) => ({
-  name: state.name,
-  ein: state.ein,
-  email: state.email,
-  capitalLevel: state.capitalLevel,
-  description: state.description
-})
-
-export const mapDispatchToProps = (dispatch) => ({
-  onTextChange: (e) => {
-    e.preventDefault()
-    dispatch( inputChange(e.target.id, e.target.value) )
-  },
-  onSubmit: (history) => {
-    dispatch( onAppSubmit(history) )
-  },
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Application)
+export default ContactUs;

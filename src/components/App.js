@@ -49,7 +49,7 @@ class App extends React.Component {
       <Container fluid>
         <TopNav appMsg={this.state.appMsg} onLinkClick={this.onLinkClick} />
         <Routes appProps={appProps} />
-        <Footer />
+        {/*<Footer />*/}
       </Container>
     );
   }

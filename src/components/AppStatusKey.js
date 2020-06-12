@@ -19,7 +19,7 @@ const AppStatusKey = (props) => {
                       id="formInputA"
                     >
                         <div className="form-group row">
-                      <label className="text-light" htmlFor="appKey">Enter Your Application Key</label>
+                      <label className="text-light"  htmlFor="appKey"><h2>Enter Your Application Key</h2></label>
                       <input 
                         type="text" 
                         className="form-control" 

@@ -2,26 +2,12 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import Footer from './Footer';
 import { connect } from 'react-redux'
 import { inputChange, onAppSubmit } from '../actions'
 
 const Application = (props) => (
     <div>
-    
-      <header className="jumbotron jumbotron-fluid">
-        <div className="container">
-            <div className="row">
-              <div className="col-4 col-sm-3 col-md-2 align-self-center">
-                <img src="images/logo1.png" height="100" width="100" className="img-fluid" />
-              </div> 
-              <div className="col-8 text-center">
-                    <h1 className="text-dark text-align-center">Fenimore Ventures</h1>
-                    <h2 className="text-dark">We can help</h2>
-              </div>
-            </div>  
-        </div>   
-      </header>
-    
      
     <section id="applicationMan" className="d-flex flex-column justify-content-center align-items-center">
       <div className="applicationMan-container" data-aos="fade-in">
@@ -106,15 +92,11 @@ const Application = (props) => (
               
       </div>
     </section>
-  
-
-
-    
-    
- 
+    <Footer />
   </div>
 
 )
+
 
 export const mapStateToProps = (state) => ({
   name: state.name,

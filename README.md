@@ -1,16 +1,13 @@
 # Fenimore Ventures
 
 ## Todo
-
-- Home page with Carrousel
-- Approach page
-- Application page
-- Success page returning unique id
+- Last Piece is the styling/mobile campatible(Basic is Key)
 - Application Status Sign in Page ask for unique id
-- (Maybe) Page to show the status of the application
-- Our Portfolio Page
-- News (send a confirmation of email)
-- Store the state in Redux
-- Use react-bootstrap for the styling
+- (Maybe) Page to show the status of the application- AppDetails page ( will show the status after key matches[line11])
+- News (send a confirmation of email from backend)
+- Store the state in Redux(about 50% more to go)
+
 * Add a dismiss alert button for success key(with react-bootstrap)
-* (Where we are) How to write get request to DDB.
+*How to write get request to DDB.
+*I need to eliminate the space between jumbotron and carousel in home.js
+

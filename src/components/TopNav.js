@@ -33,6 +33,16 @@ const TopNav = (props) => (
           onClick={(e) => props.onLinkClick(e, '/appstatuskey')}
         >Application Status
         </Nav.Link>
+        <Nav.Link
+          className="portfolio-btn"
+          onClick={(e) => props.onLinkClick(e, '/portfolio')}
+        >Our Portfolio
+        </Nav.Link>
+        <Nav.Link
+          className="news-btn"
+          onClick={(e) => props.onLinkClick(e, '/news')}
+        >Get News
+        </Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Navbar>

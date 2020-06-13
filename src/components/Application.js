@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button'
 import Footer from './Footer';
 import { connect } from 'react-redux'
 import { inputChange, onAppSubmit } from '../actions'
+import './App.css';
 
 const Application = (props) => (
     <div>

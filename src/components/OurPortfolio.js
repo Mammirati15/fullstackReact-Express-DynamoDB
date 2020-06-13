@@ -1,6 +1,5 @@
-
 import React from 'react';
-
+import Footer from './Footer'
 
 const Portfolio = (props) => (
     
@@ -51,6 +50,7 @@ const Portfolio = (props) => (
           </div>
       </div>
     </section>
+    <Footer />
 </div>
     
 )    

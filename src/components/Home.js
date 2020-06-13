@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Footer from'./Footer'
+import Button from 'react-bootstrap/Button'
 
 const Home = () => (
  
@@ -16,8 +17,8 @@ const Home = () => (
                 <h2 className="text-dark">We can help</h2>
           </div>
           <div className="col col-md-4 col-xl-2">
-            <a className="btn btn-lg btn-outline-info" href="application.html" role="button">Apply for Partnership Here!</a>
-          </div> 
+            <Button variant="outline-primary" size="large"> Apply Here For Partnership Here! </Button>
+          </div>  
         </div>
     </div>   
   </header>

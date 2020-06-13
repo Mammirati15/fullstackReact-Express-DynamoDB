@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux'
 import { inputChange, onAppKeySubmit } from '../actions'
-
+import Footer from './Footer'
 
 const AppStatusKey = (props) => {
 
@@ -34,8 +34,8 @@ const AppStatusKey = (props) => {
             </div>
         </div>
       </section>
+      <Footer />
     </Fragment>
-
   )
 }
 

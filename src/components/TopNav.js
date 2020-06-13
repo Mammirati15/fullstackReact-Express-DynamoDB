@@ -8,12 +8,12 @@ import { inputChange, onAppSubmit } from '../actions'
 
 const TopNav = (props) => (
  <div>
-  <Navbar collapseOnSelect bg="primary" variant="dark" expand="lg">
+  <Navbar collapseOnSelect bg="primary" variant="light" expand="lg">
     <Navbar.Brand
         href="#"
         onClick={(e) => props.onLinkClick(e, '/')}
     >
-        Fenimore Ventures
+        Home
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse>

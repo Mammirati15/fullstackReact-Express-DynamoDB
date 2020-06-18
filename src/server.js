@@ -9,7 +9,7 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.post('/application', (req, res) => {
+app.post('/applications', (req, res) => {
   console.log('post to /application', req.body)
   appModel.create(req.body, (err, result) => {
     if(err) {
@@ -20,8 +20,8 @@ app.post('/application', (req, res) => {
   })
 })
 
-app.get('/application/:appKey', (req, res) => {
-  console.log('get /application', req.params.appKey)
+app.get('/applications/:appKey', (req, res) => {
+  console.log('get /applications', req.params.appKey)
   appModel.find(req.params.appKey, (err, result) => {
     if(err) {
       res.json({success: false, err: err})

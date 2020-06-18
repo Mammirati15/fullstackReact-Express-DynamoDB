@@ -7,7 +7,8 @@ const initialState = {
   capitalLevel: "",
   description: "",
   msg: "",
-  appMsg: ""
+  appMsg: "",
+  appData: null
 }
 
 const mainReducer = (state=initialState, action) => {
@@ -25,6 +26,12 @@ const mainReducer = (state=initialState, action) => {
       newState.appMsg = action.msg
       console.log('newState', newState)
       return newState 
+      
+    case 'APP_GET_SUCCESS':
+      newState = Object.assign({}, state)
+      newState.appData = action.payload
+      console.log('newState', newState)
+      return newState   
   }
   return state;
 }

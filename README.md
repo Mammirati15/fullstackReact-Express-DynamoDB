@@ -10,5 +10,6 @@
 * Add a dismiss alert button for success key(with react-bootstrap)
 *How to write get request to DDB.*
 *I need to eliminate the space between jumbotron and carousel in home.js
+    and also put the navbar underneath the jumbotron.
 
 

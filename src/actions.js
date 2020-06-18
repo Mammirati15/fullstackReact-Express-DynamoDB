@@ -52,12 +52,13 @@ export const onAppKeySubmit = (history) => {
       response = await submitAppKey(state.appKey);
     } catch(e) {
       console.log('error', e)
-      
       return
     }
-    
-    
-    //console.log(response)
+    console.log(response.data.Item.id)
+    dispatch({
+      type: 'APP_GET_SUCCESS',
+      payload: response.data.Item
+    })
     history.push('/appstatusdetails')
   }
 } 

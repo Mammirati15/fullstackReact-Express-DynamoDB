@@ -1,12 +1,12 @@
 import fetch from 'isomorphic-fetch';
-
+let ip = "18.218.91.218:8081"
+const url = "http://18.218.91.218:8081/applications/"
 export const submitApp = async (appData, callback) => {
-  const url = "http://18.188.68.241:8081/application"
   const response = await fetch(url, {
     method: 'POST',
     mode: 'cors',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'applications/json'
     },
     body: JSON.stringify(appData) 
   });
@@ -14,8 +14,7 @@ export const submitApp = async (appData, callback) => {
 }
 
 export const submitAppKey = async (appKey, callback) => {
-  const url = "http://18.188.68.241:8081/application/" + appKey
-  const response = await fetch(url, {
+  const response = await fetch(url + appKey, {
     method: 'GET',
     mode: 'cors'
   });

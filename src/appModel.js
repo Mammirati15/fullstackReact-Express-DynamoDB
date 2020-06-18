@@ -21,16 +21,17 @@ const create = (appData, callback) => {
 }
 
 const find = (appKey, callback) => {
-  
+  console.log(appKey)
   const params = {
     TableName: 'applications',
-    Item: appData
+    Key: {id: appKey}
   };
-  dynamoDb.put(params, (err, result) => {
+  dynamoDb.get(params, (err, data) => {
     if(err) return callback(err)
-    delete appData.ein
-    callback(null, appData)
+    delete data.ein
+    callback(null, data)
   })
 }  
 
 module.exports.create = create
+module.exports.find = find

@@ -61,7 +61,14 @@ export const onAppKeySubmit = (history) => {
     })
     history.push('/appstatusdetails')
   }
-} 
+}
+
+export const onLinkClick = (e, path, history) => {
+  return (dispatch) => {
+    e.preventDefault();
+    history.push(path)
+  }
+}
   
   
 

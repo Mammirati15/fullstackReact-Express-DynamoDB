@@ -1,17 +1,16 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
+import React from 'react';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import Footer from './Footer';
-import { connect } from 'react-redux'
-import { inputChange, onAppSubmit } from '../actions'
+import { connect } from 'react-redux';
+import { inputChange, onAppSubmit } from '../actions';
 import './App.css';
 
 const Application = (props) => (
     <div>
      
     <section id="applicationMan" className="d-flex flex-column justify-content-center align-items-center">
-      <div className="applicationMan-container" data-aos="fade-in">
+      <div className="container" data-aos="fade-in">
           <div className="row row-content">
               <div className="col">          
                   <h1>Submit Your Application</h1>
@@ -20,7 +19,7 @@ const Application = (props) => (
                     {props.msg}
                   </div>
                   }
-                  <form 
+                  <Form 
                     onSubmit={e => {
                       e.preventDefault()
                       props.onSubmit(props.history)
@@ -86,8 +85,8 @@ const Application = (props) => (
                       >
                       </textarea>
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                  </form>           
+                    <Button type="submit" className="btn btn-primary">Submit</Button>
+                  </Form>           
                   </div>
                 </div>
               

@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import TopNav from './TopNav'
 import Routes from './Routes';
-import Footer from './Footer'
 
 class App extends React.Component {
   constructor(props){
@@ -19,15 +18,8 @@ class App extends React.Component {
       appMsg: ""
     }
     
-    this.onLinkClick = this.onLinkClick.bind(this)
     this.onTextChange = this.onTextChange.bind(this)
   }
-  
-  onLinkClick(e, path) {
-    e.preventDefault();
-    this.props.history.push(path)
-  }
-  
   
   onTextChange(e) {
     const value = e.target.value

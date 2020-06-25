@@ -31,13 +31,15 @@ const mainReducer = (state=initialState, action) => {
       newState = Object.assign({}, state)
       newState.appData = action.payload
       console.log('newState', newState)
-      return newState   
+      return newState  
+      
+    default: 
+      return state
   }
-  return state;
 }
 
 const appReducer = combineReducers({
   mainReducer
 })
 
-export default mainReducer
+export default appReducer

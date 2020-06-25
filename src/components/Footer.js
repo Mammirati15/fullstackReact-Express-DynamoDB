@@ -7,7 +7,7 @@ const Footer = (props) => (
         <div className="container">
             <div className="row">
               <div className="col-4 col-sm-3 col-md-2 align-self-center">
-                <img src="images/logo1.png" height="100" width="100" className="img-fluid" />
+                <img src="images/logo1.png" alt="" height="100" width="100" className="img-fluid" />
               </div>
               <div className="col-6 col-sm-5 text-center">
                 <h5>Social</h5>

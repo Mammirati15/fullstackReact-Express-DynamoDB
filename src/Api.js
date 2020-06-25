@@ -1,5 +1,4 @@
 import fetch from 'isomorphic-fetch';
-let ip = "18.218.91.218:8081"
 const url = "http://18.218.91.218:8081/applications/"
 export const submitApp = async (appData, callback) => {
   const response = await fetch(url, {

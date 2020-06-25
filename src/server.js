@@ -3,6 +3,7 @@ const appModel = require('./appModel')
 const express = require('express');
 const bodyParser = require('body-parser')
 var cors = require('cors')
+const db = require('./db')
 
 const app = express();
 app.use(cors())
@@ -30,6 +31,28 @@ app.get('/applications/:appKey', (req, res) => {
     }
   })
 })
+
+app.get('/campsites', (req, res) => {
+  res.json(db.campsites)
+})
+
+app.get('/comments', (req, res) => {
+  res.json(db.comments)
+})
+
+app.get('/promotions', (req, res) => {
+  res.json(db.promotions)
+})
+
+app.get('/partners', (req, res) => {
+  res.json(db.partners)
+})
+
+app.post('/feedback', (req, res) => {
+  res.json(db.feedback)
+})
+
+app.use(express.static('public'))
 
 const port = parseInt(process.env.PORT) + 1
 app.listen(port, () => {console.log('server started ' + port)})

@@ -1,7 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { inputChange, onAppSubmit } from '../actions';
-
 
 const AppStatusDetails = ({appData}) => (
     <div>
